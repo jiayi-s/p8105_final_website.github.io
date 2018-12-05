@@ -1,0 +1,52 @@
+---
+title: "Data"
+---
+
+### Data {.tabset .tabset-fade .tabset-pills}
+
+#### Macroeconomics Analysis-Labor market
+
+The macro-economic situation in data science industry embeded in background part were retrieved from the Bureau of Labour Statistics website-*Occupational Employment Statistics*:
+
+1. **National data**:[National Occupational Employment Status and Wage Estimates from US Bureau of Labour Statistics (using data of year 2017)](https://www.bls.gov/oes/tables.htm)
+
+2. **State data**:[National Occupational Employment Status and Wage Estimates from US Bureau of Labour Statistics (using data covering 2007 until 2017)](https://www.bls.gov/oes/tables.htm)
+
+
+#### Exploratory Study  
+we used two datasets for we used our jobs analysis.
+
+1. [Data Scientist Job Posts in the U.S on Indeed Website in 2018 August](https://www.kaggle.com/sl6149/data-scientist-job-market-in-the-us#alldata.csv)
+
+* The main analysis draws from data scraped and cleaned by Shanshan Lu from Kaggle. This Indeed dataset originates from Indeed website, containing 7,000 data scientist jobs around the U.S. by August 3rd, 2018. Main variables include `Company Name`, `Position Name`, `Location`, `Job Description`, and `Number of Reviews of the Company`. We mainly squared at the job description column that contains information such as a short description of company and position, requirement and route of application.
+
+Based on the ranking of total revenues of each company’s retrospective fiscal year, Fortune magazine's annual report of top 500 largest companies in the U.S has always been regarded as a reliable measurement for the value of a company. Many of the Fortune 500 companies now have a job title of Chief Data Scientist or Head of Analytics, and some Internet magnets have invested much on data mining, Artificial Intelligence or related areas. 
+
+
+2. Comparison of top-500 companies and non-top 500 companies are based on Data from [The 500 Largest Industrial Corporations in the U.S., Published by Fortune  magazine (updated by October 5, 2018)](https://catalog.data.gov/dataset/fortune-500-corporate-headquarters)
+
+Given that differences of preference of these big-names and small companies may have for employees, we will combine the Fortune 500 company list and our Indeed dataset by  company name. Through creating a new logical variable named `flag` to indicate whether each company falls into Fortune 500 companies category or not, this full dataset will be adopted for our Exploratory analysis. 
+
+
+## R packages
+
+In this project, main r projects we adopted to create the content are:
+
+Data wrangling:
+
+* tidyverse
+* dplyr
+* rvest
+* readr
+* stringr
+* tidytext
+
+Graph: 
+
+* treemap
+* d3treeR
+* ggplot2
+* plotly
+* wordcloud
+* RColorBrewer
+* flexdashboard
