@@ -27,14 +27,32 @@ If this is for a project or analysis, I recommend giving some details about the 
 
 ```
 
+
 ```{r echo=FALSE}
 icon::fa("hourglass-start", size = 3)
 ```
+
+### About the data
+
+The macro-economic situation in data science industry embeded in background part were retrieved from the Bureau of Labour Statistics website-*Occupational Employment Statistics*:
+
+* **National data**:
+
+* **State data**:[National Occupational Employment Status and Wage Estimates from US Bureau of Labour Statistics (using data covering 2007 until 2017)](https://www.bls.gov/oes/tables.htm)
+
+
+For our exploratory study we used two datasets. 
+
+* The main analysis draws from[Data Scientist Job Posts in the U.S on Indeed Website in 2018 August](https://www.kaggle.com/sl6149/data-scientist-job-market-in-the-us#alldata.csv)
+
+* Comparison of top-500 companies and non-top 500 companies are based on Data from [The 500 Largest Industrial Corporations in the U.S., Published by Fortune  magazine (updated by October 5, 2018)](https://catalog.data.gov/dataset/fortune-500-corporate-headquarters)
 
 
 ```{r echo=FALSE}
 icon::fa("hourglass-half", size = 3)
 ```
+
+### Analysis
 
 
 ```{r echo=FALSE}
