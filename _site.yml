@@ -8,8 +8,6 @@ navbar:
       href: data.html
     - text: "flexdashboard"
       href: flexdashboard.html
-    - text: 
-      href: 
     - icon: fa-youtube fa-lg
       href: https://youtube.com/zabormetrics
     - icon: fa-github fa-lg

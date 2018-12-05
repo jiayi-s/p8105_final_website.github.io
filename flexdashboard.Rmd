@@ -1,8 +1,9 @@
 ---
 title: "flexdashboard"
 output: 
-  flexdashboard::flex_dashboard
-
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
 ---
 
 ```{r setup, include=FALSE}
@@ -21,20 +22,16 @@ library(ggmap)
 library(plotly)
 library(treemap)
 library(d3treeR)
-
-
+# devtools::install_github("timelyportfolio/d3treeR")
 state_17 <- read_xlsx("./data/state/oesm17st/state_M2017_dl.xlsx") %>% 
   janitor::clean_names() %>% 
   mutate(a_mean = as.numeric(a_mean)) %>%
   mutate(tot_emp = as.numeric(tot_emp))
-
 ## Missing data replaced by mean salary in that specific detailed field for annual salary 
 state_df <-  
   state_17 %>% 
   mutate(a_mean = ifelse(is.na(a_mean), mean(a_mean, na.rm = TRUE), a_mean)) %>% 
   mutate(state = tolower(state))    ## To match the case of state names in 2 dataframe 
-
-
 ## Add state salary df.
 state_salary <- 
   state_df %>%
@@ -45,16 +42,13 @@ state_salary <-
             mean_salary = a_mean,
             mean_total = tot_emp,
             mean_job = round(as.numeric(jobs_1000), 2))
-
 ## By using map plotly
 states_map <- map_data("state")
-
 state_salary$hover <- 
   with(state_salary, paste(
     "Salary: $", round(mean_salary, 2),'<br>',
             "Total:", mean_total, '<br>',
             "DS Jobs per 1000:", mean_job,'<br>'))
-
 # give state boundaries a white border
 l <- list(color = toRGB("white"), width = 2)
 # specify some map projection/options
@@ -70,7 +64,6 @@ g <- list(
 ```{r message=FALSE, warning=FALSE, include=F}
 datascience <- read_csv("./data/ds_500.csv") %>% 
   filter(!is.na(position))
-
 pattern_bg = c("[Cc]omputer [Ss]cience | \\bC\\.?S\\b | [Mm]achine [Ll]earning | \\bM\\.?L\\b", 
                  "[Ss]tatistic", 
                  "[Mm]ath", 
@@ -89,7 +82,6 @@ name_bg = c("CS",
           "Biostatistics", 
           "DS", 
           "Engineer")
-
 bg_freq = data.frame(
   background = pattern_bg, 
   index = name_bg, 
@@ -97,30 +89,28 @@ bg_freq = data.frame(
   top500 = rep(0, length(pattern_bg)), 
   nontop500 = rep(0, length(pattern_bg)) 
 )
-
 for (i in c(1:length(pattern_bg))) {
   bg_freq$freq_total[i] = sum(str_detect(datascience$description, as.character(bg_freq$background[i])))
   bg_freq$top500[i] = sum(str_detect(datascience$description[which(datascience$flag == 1)], as.character(bg_freq$background[i])))
   bg_freq$nontop500[i] = sum(str_detect(datascience$description[which(datascience$flag == 0)], as.character(bg_freq$background[i])))
 }
-
 bg_freq = 
   bg_freq %>% 
-  gather(key = subgroup, value = freq, top500:nontop500)
-
+  gather(key = subgroup, value = freq, top500:nontop500) %>% 
+  mutate(freq_ratio = ifelse(subgroup == "top500", freq/sum(datascience$flag == 1), freq/sum(datascience$flag == 0))) %>% 
+  mutate(subgroup = paste("In ", subgroup, ": n(companies) = ", freq, ", ratio = ", round(freq_ratio, digits = 3), sep = ""))
 p = 
 treemap(
     bg_freq,
     index = c("index", "subgroup"), 
-    vSize = "freq", 
-    vColor = "freq", 
+    vSize = "freq_ratio", 
+    vColor = "freq_ratio", 
     type = "value",
-    palette = "Blues", 
-    fontsize.labels = 20
+    palette = "Blues"
     )
 ```
 
-Column {data-width= 600 }
+Column {data-width=650}
 -----------------------------------------------------------------------
 
 ### Chart A
@@ -139,27 +129,10 @@ plot_geo(state_salary, locationmode = 'USA-states') %>%
   )
 ```
 
-
+Column {data-width=350}
+-----------------------------------------------------------------------
 ### Chart B
 
 ```{r}
-d3tree2(p, rootname = "General")
+d3tree(p, rootname = "General")
 ```
-
-Row {.tabset .tabset-fade}
------------------------------------------------------------------------
-### Chart C
-
-```{r}
-
-```
-
-
------------------------------------------------------------------------
-
-### Chart D 
-
-```{r}
-
-```
-
