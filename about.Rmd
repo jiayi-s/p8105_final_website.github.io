@@ -1,0 +1,86 @@
+---
+title: "Data Science: where is your next job?"
+output: 
+  html_document:
+    self_contained: no
+    highlight: haddock
+    toc: true
+    toc_float:
+      collapse: true
+      smooth_scroll: false
+    author: "Shan Jiang(sj2921), Jiayi Shen (js5354), Jie Yu (jy2944), Eleanor Zhang (zz2602), Guojing Wu (gw2383)"
+---
+
+### Our motivation
+
+<p>
+<img src="" alt="Smiley face" style="float:right;width:42px;height:42px;">
+A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.
+</p>
+<img src="./images/2. Data-Science_bh.jpeg" style="width:75%">
+
+<center>
+```{r echo=FALSE}
+icon::fa("rocket", size = 5, animate = "spin")
+```
+</center>
+<p> </p>
+
+
+
+
+### Methods
+
+#### data
+
+The macro-economic situation in data science industry embeded in background part were retrieved from the Bureau of Labour Statistics website-*Occupational Employment Statistics*:
+
+1. **National data**:[National Occupational Employment Status and Wage Estimates from US Bureau of Labour Statistics (using data of year 2017)](https://www.bls.gov/oes/tables.htm)
+
+2. **State data**:[National Occupational Employment Status and Wage Estimates from US Bureau of Labour Statistics (using data covering 2007 until 2017)](https://www.bls.gov/oes/tables.htm)
+
+3. **Indeed retrieved data**: [Data Scientist Job Posts in the U.S on Indeed Website in 2018 August](https://www.kaggle.com/sl6149/data-scientist-job-market-in-the-us#alldata.csv)
+
+4. Comparison of **fortune 500 U.S companies** and  **non fortune 500 U.S companies** are based on Data from [The 500 Largest Industrial Corporations in the U.S., Published by Fortune  magazine (updated by October 5, 2018)](https://catalog.data.gov/dataset/fortune-500-corporate-headquarters)
+
+<center>
+```{r echo=FALSE, fig.align="center"}
+icon::fa("hourglass-half", size = 3)
+```
+</center>
+### Analysis
+
+For the purpose of working with job description text stored as strings in R, we removed stop words from the text before we searched for words or phrases occurring at high frequency among the text. Occasionally throughout our navigating progress,  we have to adjust the stop words library in order to keep some case and letter sensitive word, for example, software languages R, C, or C++. 
+
+<center>
+```{r echo=FALSE, fig.align="center"}
+icon::fa("hourglass-start", size = 3)
+```
+
+</center>
+
+### Results 
+Reviewing U.S. job market of data scientists in recent 10 years
+
+Tools
+
+Skills
+
+
+Text Analysis
+
+
+
+
+<br />
+<center>
+```{r echo=FALSE, fig.align="center"}
+icon::fa("hourglass-end", size = 3)
+```
+
+</center>
+### Discussion 
+
+### Github
+Sometimes you need to say a bit about the site -- how it was made, where it's hosted, where the source code can be found.
+Here is the Github repository of our project, you can be find everything you need [here](https://github.com/zixuanzhang/p8105_Final_Project).

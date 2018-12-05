@@ -1,0 +1,54 @@
+---
+title: "Welcome to Data Science Job outlook project!"
+---
+
+```{r eval=FALSE, include=FALSE}
+library(hexSticker)
+
+dta_url = "./images/cow.png"
+
+sticker(dta_url, 
+        package = "", 
+        spotlight = FALSE,
+                    h_color = "#352638",
+                    h_fill = "#996EA3",
+                    p_size = 0.3, p_y = 0.05,
+                    p_family = "RobotoCondensed-Regular",
+                    s_x = 1, s_y = 0.88, s_width = 0.55,
+                    url = "P8105 Final",
+                    u_size = 2,
+                    u_y = 0.11,
+                    u_color = "#352638",
+        filename = "./images/logo.png")
+```
+
+<center>
+<img src= "./images/banner.jpg" style="width:90%"> 
+
+</center>
+
+</center>
+
+### Introduction
+
+This is P8105 Data Science Job outlook final project website. <br />
+
+</center>
+> Data Scientist has been named the best job in America for three years running, with a median base salary of $110,000 and 4,524 job openings.
+
+
+The importance of data science is indisputable.For analyzing massive information and  Students from statistics, computer science, economics and other related quantitative fields are all diving in searching more job opportunities in this area. 
+
+
+According to the *2018 August Linkedin Workforce Report*, there is a roaring demand for workforces with data science skills across industries in the United States. As more institutions and industry sectors rely on big data to deal with operational challenges and optimize their decisions, the shortage of well-trained personnel in data science has been reported to be 151,717. Some regions are even in acute shortage, such as New York City, San Francisco, and Los Angeles. 
+<br />
+
+Given that graduate students entering into the job market with bachelor, master, or Ph.D. degree are actively seeking jobs locally or nationwide, we want to utilize the 7000 jobs posting information scraped from Indeed by Shanshan Lu on [Kaggle](http://www.kaggle.com) in order to investigate the data science job market in the U.S. 
+
+Particularly, we are interested in geographic concentration of job opportunities, set of skills employers are expecting, and different qualifications and requirements for data science-related jobs. We are hoping this exploratory analysis will help students better tailor at their skill building and job hunting in the future.
+
+Some of the most exciting questions in our projects are:
+* Which degree is preferred?
+* Which tool is more desirable? R or Python for top-500 companies?
+* Does top-500 companies are more excited about hiring Ph.D. students?
+

@@ -1,0 +1,19 @@
+name: "Data Science: where is my job?"
+navbar:
+  title: "Home"
+  right:
+    - text: "About"
+      href: about.html
+    - text: "Data"
+      href: data.html
+    - text: "Flexdashboard"
+      href: flexdashboard.html
+    - icon: fa-youtube fa-lg
+      href: https://youtube.com/zabormetrics
+    - icon: fa-github fa-lg
+      href: https://github.com/jiayi-s/p8105_final_website.github.io
+output:
+  html_document:
+    include:
+       after_body: footer.html
+  
