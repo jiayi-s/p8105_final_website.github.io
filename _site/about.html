@@ -366,11 +366,15 @@ div.tocify {
         <li>
   <a href="about.html">About</a>
 </li>
-<li class="dropdown-header">Whatever Menu 1</li>
+<li>
+  <a href="data.html">Data</a>
+</li>
 <li>
   <a href="flexdashboard.html">flexdashboard</a>
 </li>
-<li class="dropdown-header">Screencast</li>
+<li>
+  <a></a>
+</li>
 <li>
   <a href="https://youtube.com/zabormetrics">
     <span class="fa fa-youtube fa-lg"></span>
@@ -378,7 +382,7 @@ div.tocify {
   </a>
 </li>
 <li>
-  <a href="http://github.com/p8105_final_website.github.io">
+  <a href="https://p8105_final_website.github.io">
     <span class="fa fa-github fa-lg"></span>
      
   </a>
@@ -397,29 +401,68 @@ div.tocify {
 </div>
 
 
-<div id="about-this-site" class="section level3">
-<h3>About this site</h3>
-<p><img src="images/image.jpg" style="width:75%"></p>
+<div id="our-motivation" class="section level3">
+<h3>Our motivation</h3>
+<p>
+<img src="" alt="Smiley face" style="float:right;width:42px;height:42px;"> A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.
+</p>
+<p><img src="images/2.%20Data-Science_bh.jpeg" style="width:75%"></p>
+<center>
 <i class="fas  fa-rocket fa-5x fa-spin "></i>
-<p>Sometimes you need to say a bit about the site – how it was made, where it’s hosted, where the source code can be found.</p>
-<p>If this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.</p>
+</center>
+<p>
+</p>
 </div>
-<div id="about-the-data" class="section level3">
-<h3>About the data</h3>
-<ul>
-<li>The macro-economic situation in data science industry embeded in background part were retrieved from the <a href="https://www.bls.gov/oes/tables.htm">National Occupational Employment Status and Wage Estimates from US Bureau of Labour Statistics (using data covering 2007 until 2017)</a></li>
-</ul>
-<p>For our exploratory study we used two datasets.</p>
-<ul>
-<li><p>The main analysis draws from<a href="https://www.kaggle.com/sl6149/data-scientist-job-market-in-the-us#alldata.csv">Data Scientist Job Posts in the U.S on Indeed Website in 2018 August</a></p></li>
-<li><p><a href="https://catalog.data.gov/dataset/fortune-500-corporate-headquarters">The 500 Largest Industrial Corporations in the U.S., Published by Fortune magazine (updated by October 5, 2018)</a></p></li>
-<li><p>Comparison of top-500 companies and non-top 500 companies are based on Data from</p></li>
-</ul>
-<i class="fas  fa-hourglass-start fa-3x "></i>
+<div id="methods" class="section level3">
+<h3>Methods</h3>
+<div id="data" class="section level4">
+<h4>data</h4>
+<p>The macro-economic situation in data science industry embeded in background part were retrieved from the Bureau of Labour Statistics website-<em>Occupational Employment Statistics</em>:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>National data</strong>:<a href="https://www.bls.gov/oes/tables.htm">National Occupational Employment Status and Wage Estimates from US Bureau of Labour Statistics (using data of year 2017)</a></p></li>
+<li><p><strong>State data</strong>:<a href="https://www.bls.gov/oes/tables.htm">National Occupational Employment Status and Wage Estimates from US Bureau of Labour Statistics (using data covering 2007 until 2017)</a></p></li>
+<li><p><strong>Indeed retrieved data</strong>: <a href="https://www.kaggle.com/sl6149/data-scientist-job-market-in-the-us#alldata.csv">Data Scientist Job Posts in the U.S on Indeed Website in 2018 August</a></p></li>
+<li><p>Comparison of <strong>fortune 500 U.S companies</strong> and <strong>non fortune 500 U.S companies</strong> are based on Data from <a href="https://catalog.data.gov/dataset/fortune-500-corporate-headquarters">The 500 Largest Industrial Corporations in the U.S., Published by Fortune magazine (updated by October 5, 2018)</a></p></li>
+</ol>
+<center>
 <i class="fas  fa-hourglass-half fa-3x "></i>
+</center>
+</div>
+</div>
+<div id="analysis" class="section level3">
+<h3>Analysis</h3>
+<p>For the purpose of working with job description text stored as strings in R, we removed stop words from the text before we searched for words or phrases occurring at high frequency among the text. Occasionally throughout our navigating progress, we have to adjust the stop words library in order to keep some case and letter sensitive word, for example, software languages R, C, or C++.</p>
+<center>
+<i class="fas  fa-hourglass-start fa-3x "></i>
+</center>
+</div>
+<div id="results" class="section level3">
+<h3>Results</h3>
+<p>Reviewing U.S. job market of data scientists in recent 10 years</p>
+<p>Tools</p>
+<p>Skills</p>
+<p>Text Analysis</p>
+<br />
+<center>
 <i class="fas  fa-hourglass-end fa-3x "></i>
+</center>
+</div>
+<div id="discussion" class="section level3">
+<h3>Discussion</h3>
+</div>
+<div id="github" class="section level3">
+<h3>Github</h3>
+<p>Sometimes you need to say a bit about the site – how it was made, where it’s hosted, where the source code can be found. Here is the Github repository of our project, you can be find everything you need <a href="https://github.com/zixuanzhang/p8105_Final_Project">here</a>.</p>
 </div>
 
+<br><br>
+<footer 
+    display: flex;
+    justify-content: space-between;
+    text-align: justify >
+  <img src="images/logo.png" alt="stickers" style="width:20%" align= "middle">
+  <p class="footerP">© Shan Jiang(sj2921), Jiayi Shen (js5354), Jie Yu (jy2944), Eleanor Zhang (zz2602), Guojing Wu (gw2383) 2018 </p>
+</footer>
 
 
 </div>
