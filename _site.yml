@@ -11,7 +11,7 @@ navbar:
     - icon: fa-youtube fa-lg
       href: https://youtube.com/zabormetrics
     - icon: fa-github fa-lg
-      href: https://p8105_final_website.github.io
+      href: https://github.com/jiayi-s/p8105_final_website.github.io
 output:
   html_document:
     include:

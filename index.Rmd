@@ -28,6 +28,7 @@ sticker(dta_url,
 </center>
 
 </center>
+
 ### Introduction
 
 This is P8105 Data Science Job outlook final project website. <br />
