@@ -6,7 +6,7 @@ navbar:
       href: about.html
     - text: "Data"
       href: data.html
-    - text: "flexdashboard"
+    - text: "Flexdashboard"
       href: flexdashboard.html
     - icon: fa-youtube fa-lg
       href: https://youtube.com/zabormetrics
