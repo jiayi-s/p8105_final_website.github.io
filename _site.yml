@@ -5,8 +5,6 @@ navbar:
   right:
     - text: "About"
       href: about.html
-    - icon: fa-envelope fa-lg
-      href: 
     - icon: fa-github fa-lg
       href: https://p8105_final_website.github.io
 output:
