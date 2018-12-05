@@ -1,4 +1,4 @@
-name: "Data Science: where is your next job?"
+name: "Data Science: where is my job?"
 navbar:
   title: "Home"
   right:
@@ -6,8 +6,8 @@ navbar:
       href: about.html
     - text: "Whatever Menu 1"
       href: 
-    - text: 'Whatever Menu 2'
-      href: 
+    - text: "flexdashboard"
+      href: flexdashboard.html
     - text: "Screencast"
       href: 
     - icon: fa-youtube fa-lg
@@ -16,4 +16,7 @@ navbar:
       href: https://p8105_final_website.github.io
 output:
   html_document
+  theme: 
+    css: 'styles.css'
+  
   
