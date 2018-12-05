@@ -1,9 +1,42 @@
 ---
-title: "About"
+title: "Data Science: where is your next job?"
+output: 
+  html_document:
+    self_contained: no
+    highlight: haddock
+    toc: true
+    toc_float:
+      collapse: true
+      smooth_scroll: false
+    author: "Shan Jiang(sj2921), Jiayi Shen (js5354), Jie Yu (jy2944), Eleanor Zhang (zz2602), Guojing Wu (gw2383)"
 ---
 
 ### About this site
 
+<img src="images/image.jpg" style="width:75%">
+
+```{r echo=FALSE}
+icon::fa("rocket", size = 5, animate = "spin")
+```
+
 Sometimes you need to say a bit about the site -- how it was made, where it's hosted, where the source code can be found. 
 
 If this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.
+
+```{r}
+
+```
+
+```{r echo=FALSE}
+icon::fa("hourglass-start", size = 3)
+```
+
+
+```{r echo=FALSE}
+icon::fa("hourglass-half", size = 3)
+```
+
+
+```{r echo=FALSE}
+icon::fa("hourglass-end", size = 3)
+```
